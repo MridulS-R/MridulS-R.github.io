@@ -1,7 +1,7 @@
 <p align="center">
   <picture>
     <source media="(prefers-color-scheme: dark)" srcset="https://svg-banners.vercel.app/api?type=glitch&text1=Mridul%20Shukla&text2=Rails%20Engineer&width=1200&height=250"/>
-    <img alt="Mridul Shukla — Rails Engineer" src="https://svg-banners.vercel.app/api?type=glitch&text1=Mridul%20Shukla&text2=Rails%20Engineer&width=1200&height=250"/>
+    <img alt="Mridul Shukla — Rails Engineer" src="https://svg-banners.vercel.app/api?type=glitch&text1=Hello%20World!&text2=Rails%20Engineer&width=1200&height=250"/>
   </picture>
 </p>
 
