@@ -1,116 +1,166 @@
-<!-- Profile README for Mridul Shukla -->
-
-<h1 align="center">Hi, I’m Mridul — Sr. Software Engineer (Ruby on Rails)</h1>
-
 <p align="center">
-Robust backends • Data-heavy systems • High-scale ingestion • Product-minded delivery
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="https://svg-banners.vercel.app/api?type=glitch&text1=Mridul%20Shukla&text2=Rails%20Engineer&width=1200&height=250"/>
+    <img alt="Mridul Shukla — Rails Engineer" src="https://svg-banners.vercel.app/api?type=glitch&text1=Mridul%20Shukla&text2=Rails%20Engineer&width=1200&height=250"/>
+  </picture>
 </p>
 
----
 
-## About Me
+👋 Hi, I’m Mridul Shukla
 
-I’m a results-driven software engineer with ~8 years of experience building and scaling enterprise web platforms. I specialize in **Ruby on Rails**, **Postgres/MySQL**, **Sidekiq**, and **AWS**, with hands-on work across ingestion pipelines, validation/versioning/compilation flows, and performance tuning for large datasets. I enjoy owning problems end-to-end, collaborating with product, and shipping measurable outcomes.  [oai_citation:0‡Mridul_CV2025.docx](file-service://file-V2WFjLB1sZkkfuRTn7395P)
+<p align="center">
+  <img src="https://img.shields.io/badge/Ruby_on_Rails-%23CC0000.svg?logo=rubyonrails&logoColor=white" alt="Rails"/>
+  <img src="https://img.shields.io/badge/Ruby-CC342D?logo=ruby&logoColor=white" alt="Ruby"/>
+  <img src="https://img.shields.io/badge/PostgreSQL-316192?logo=postgresql&logoColor=white" alt="Postgres"/>
+  <img src="https://img.shields.io/badge/Elasticsearch-005571?logo=elasticsearch&logoColor=white" alt="Elasticsearch"/>
+  <img src="https://img.shields.io/badge/Sidekiq-CC0000?logo=ruby&logoColor=white" alt="Sidekiq"/>
+  <img src="https://img.shields.io/badge/AWS-232F3E?logo=amazon-aws&logoColor=white" alt="AWS"/>
+</p>
 
----
 
-## What I’m Great At
+Senior Software Engineer · Rails/Backend · Data pipelines · Alerts/Notifications · Performance & scale
 
-- **Languages & Frameworks:** Ruby, Ruby on Rails, Java, JavaScript/Node.js, React, iOS (basics)
-- **Data & Infra:** PostgreSQL, MySQL, MongoDB, Apache Cassandra, Redis, Elasticsearch
-- **Architecture:** Microservices, REST APIs, Client–Server apps, third-party integrations
-- **Cloud & Ops:** AWS (S3, Lambda, EC2), Docker, CI/CD, observability
-- **Background Jobs:** Sidekiq (incl. Pro), batching, retries, idempotency
-- **Testing:** RSpec, Minitest, Capybara
-- **Ways of Working:** Agile/Scrum, PR hygiene, documentation, production ownership
- [oai_citation:1‡Mridul_CV2025.docx](file-service://file-V2WFjLB1sZkkfuRTn7395P)
+<p align="center">
+  <a href="#-about-me">About</a> •
+  <a href="#-toolbox">Toolbox</a> •
+  <a href="#-highlights">Highlights</a> •
+  <a href="#-featured-projects">Projects</a> •
+  <a href="#-open-source">Open Source</a> •
+  <a href="#-stats">Stats</a> •
+  <a href="#-contact">Contact</a>
+</p>
 
----
 
-## Impact Highlights
 
-- 📈 **+20% product revenue** in months by fixing early issues and aligning features with user needs.  
-- 💸 **−5% deployment cost** in the first quarter through pragmatic infra/ops improvements.  
-- 📥 **+10% data ingested** QoQ by optimizing ingestion and validation paths.  
-- ✅ **Billion+ records** validated via streamlined pipelines and AWS + Elasticsearch–backed architecture.  
- [oai_citation:2‡Mridul_CV2025.docx](file-service://file-V2WFjLB1sZkkfuRTn7395P)
+⸻
 
----
+🧭 About Me
+	•	Rails engineer focused on large‑scale ingestion, background jobs, and domain‑heavy systems.
+	•	Recently building a flexible Alerts/Notification subsystem (polymorphic, fingerprinting/stacking, email jobs).
+	•	Love turning ambiguous requirements into production‑ready features with tests & docs.
+	•	Exploring Ruby gems, VS Code extensions, iOS prototypes, and Sanskrit NLP side projects.
 
-## Recent Work
+Current interests: performance tuning for CSV/S3 pipelines, Elasticsearch batching, Sidekiq cron/topology, and developer ergonomics.
 
-### Data Axle — Software Engineer (Dec 2021–Present) · Pune, India
-**Product:** Data Axle Platform / Local Listing Premium (Data domain)  
-Built and evolved a robust data platform combining ingestion, validation, versioning, compilation, and storage, backed by AWS services and Elasticsearch. Took ownership of modules, drove measurable revenue and cost outcomes, and scaled data throughput/quality.  [oai_citation:3‡Mridul_CV2025.docx](file-service://file-V2WFjLB1sZkkfuRTn7395P)
+⸻
 
-**Core themes**
-- Ingestion pipelines for very large datasets (billions of records)
-- Data validation & compilation workflows
-- Performance tuning, cost control, production stability
-- Rails + Postgres/MySQL + Sidekiq + AWS + Elasticsearch
+🧰 Toolbox
 
----
+Languages: Ruby, JavaScript/TypeScript, SQL, Swift (iOS), Bash
 
-### Globant India — Ruby Developer (Jan 2020–Dec 2021)
-**Project:** ESPN Golden Analyzers — Disney DTCI (Mass & Media)  
-Contributed Ruby gems and developer tooling to improve capacity/performance of internal testing frameworks (“Black Order”), streamlined workflows for easier configuration and usage.  [oai_citation:4‡Mridul_CV2025.docx](file-service://file-V2WFjLB1sZkkfuRTn7395P)
+Frameworks / Runtimes: Rails 6/7, Rack, RSpec & Minitest, Sidekiq, Redis, Node.js
 
----
+Datastores: PostgreSQL/MySQL, Elasticsearch, SQLite, S3 (data lake patterns)
 
-### MothersonSumi Infotech & Design — Software Engineer (Sept 2017–Dec 2019)
-**Restaurant OS:** Rails, Node.js, Kafka, Postgres, Cassandra  
-- Designed modules, built services, introduced microservices patterns, and shipped to production.  
-**GST (India):** Java, Postgres, Node.js  
-- Built GSP agent module for uploading invoices and GST workflows used widely across India.  [oai_citation:5‡Mridul_CV2025.docx](file-service://file-V2WFjLB1sZkkfuRTn7395P)
+Infra / DevOps: AWS (S3, EC2, RDS, SQS, SES), Docker, GitHub Actions, Nginx
 
----
+Practices: TDD, Clean architecture, background job orchestration, observability (Honeybadger/Logs), performance profiling
 
-## Toolbox
+⸻
 
-- **Backend:** Rails 6/7, Sidekiq, Grape, Devise, ActiveJob
-- **Data:** Postgres, MySQL, Redis, MongoDB, Cassandra
-- **Search/Indexing:** Elasticsearch
-- **Cloud/DevOps:** AWS (S3, Lambda, EC2), Docker, GitHub Actions
-- **Frontend (working knowledge):** React, JS, jQuery, Bootstrap
-- **Testing:** RSpec, Capybara, Minitest
- [oai_citation:6‡Mridul_CV2025.docx](file-service://file-V2WFjLB1sZkkfuRTn7395P)
+🌟 Highlights
+	•	Designed a Stackable Alerts system with SHA‑256 fingerprinting, severity gates, and email snapshotting.
+	•	Built memory‑safe CSV ingestion flows (2GB+) with streaming, batching, and back‑pressure via Sidekiq.
+	•	Implemented Elasticsearch indexing/search with batch upserts and denormalized views.
+	•	Rewrote brittle migrations & scopes; added robust Minitest/RSpec coverage and CI gates.
 
----
+Impact: fewer regressions, faster ingest, clearer on‑call signals, and happier teammates.
 
-## I Can Help With
+⸻
 
-- Designing and scaling **data platforms** and **ingestion/validation pipelines**
-- Hardening **APIs** and **microservices** with reliability, observability, and cost in mind
-- **Performance profiling** (DB, queries, jobs), **indexing** strategies, and **queue tuning**
-- Product-aligned engineering: turning metrics into outcomes
+🚀 Featured Projects
 
----
+content_system (Rails)
 
-## Education
+High‑volume content delivery platform with subscriptions, deliveries, and exclusion logic; robust CSV/S3 ingestion; alerting & notifications.
 
-**B.Tech (CSE)** — PSIT College of Engineering, India (2013–2017)  [oai_citation:7‡Mridul_CV2025.docx](file-service://file-V2WFjLB1sZkkfuRTn7395P)
+alert-notifier (Gem)
 
----
+Configurable alerting primitives (stackable fingerprint, occurrences, severity, email snapshotting) for any Rails app.
 
-## Let’s Connect
+csv-streamer (Gem)
 
-- **Email:** sr.mridulshukla9@gmail.com  
-- **Phone:** +91 9773851994  
-- **LinkedIn:** Mridul Shukla  
- [oai_citation:8‡Mridul_CV2025.docx](file-service://file-V2WFjLB1sZkkfuRTn7395P)
+Zero‑copy CSV streaming utilities for massive files; enumerators, chunked writes, and memory guardrails.
 
----
+star_deduplicator (Gem)
 
-## Fun Facts
+Fuzzy deduplication for contact/record datasets; configurable scorers and field weights.
 
-- I enjoy turning messy data problems into elegant, observable pipelines.
-- Strong bias for **measurable** improvements (latency, cost, throughput, revenue).
-- I love clear docs, actionable dashboards, and predictable deployments.
+algo-sage (VS Code Extension)
 
----
+Developer assistant that suggests algorithms, complexity notes, and code patterns for Ruby/TS.
 
-<!-- Optional: GitHub Stats cards (replace <username>) -->
+saṃskṛt‑nlp (Research)
+
+Independent Sanskrit NLP experiments: data ingestion from PDFs, tokenization, ByT5/BERT exploration.
+
+Note: Repositories may be private/work‑in‑progress. Ping me if you’d like a walkthrough.
+
+⸻
+
+🤝 Open Source
+
+I enjoy contributing to the Ruby/Rails ecosystem—areas of interest:
+	•	background jobs & reliability
+	•	CSV/data tools
+	•	test tooling and observability
+
+I’m always up for pairing on issues labeled good first issue/help wanted.
+
+⸻
+
+📊 Stats
+
+Replace mridul-shukla below with your GitHub handle and uncomment the images.
+
 <!--
-![Mridul's GitHub stats](https://github-readme-stats.vercel.app/api?username=<username>&show_icons=true)
-![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=<username>&layout=compact)
+<p align="center">
+  <img src="https://github-readme-stats.vercel.app/api?username=mridul-shukla&show_icons=true&hide_title=true" alt="GitHub Stats" />
+</p>
+<p align="center">
+  <img src="https://github-readme-streak-stats.herokuapp.com?user=mridul-shukla&date_format=j%20M%5B%20Y%5D" alt="Streak" />
+</p>
+<p align="center">
+  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=mridul-shukla&layout=compact" alt="Top Languages" />
+</p>
 -->
+
+
+<details>
+  <summary>Activity Graph</summary>
+
+
+  <!-- Optional: requires external service -->
+
+
+  <!-- <img src="https://github-readme-activity-graph.vercel.app/graph?username=mridul-shukla&hide_border=true" alt="Activity Graph"/> -->
+
+
+</details>
+
+
+
+⸻
+
+📝 Writing & Talks
+	•	Notes on Rails alerting patterns (stackable fingerprints, severity gates)
+	•	Scaling CSV ingestion on Rails without blowing memory
+	•	Elasticsearch batching for 1M+ documents
+
+DM for slides or long‑form writeups.
+
+⸻
+
+📫 Contact
+	•	GitHub: [@mridul-shukla](https://github.com/MridulS-R)
+	•	LinkedIn: [/in/mridul-shukla](https://www.linkedin.com/in/mridul-shukla-1a335818a/)
+
+⸻
+
+☕ Support / Connect
+
+If you like my work, star the repos, open issues, or say hi!
+
+<p align="center">
+  <img src="https://komarev.com/ghpvc/?username=mridul-shukla&label=Profile%20views&color=0e75b6&style=flat" alt="views" />
+</p>
