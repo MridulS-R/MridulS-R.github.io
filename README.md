@@ -35,9 +35,9 @@ Senior Software Engineer · Rails/Backend · Data pipelines · Alerts/Notificati
 ⸻
 
 🧭 About Me
-	•	Rails engineer focused on large‑scale ingestion, background jobs, and domain‑heavy systems.
+	•	Rails engineer focused on large-scale ingestion, background jobs, and domain-heavy systems.
 	•	Recently building a flexible Alerts/Notification subsystem (polymorphic, fingerprinting/stacking, email jobs).
-	•	Love turning ambiguous requirements into production‑ready features with tests & docs.
+	•	Love turning ambiguous requirements into production-ready features with tests & docs.
 	•	Exploring Ruby gems, VS Code extensions, iOS prototypes, and Sanskrit NLP side projects.
 
 Current interests: performance tuning for CSV/S3 pipelines, Elasticsearch batching, Sidekiq cron/topology, and developer ergonomics.
@@ -47,24 +47,20 @@ Current interests: performance tuning for CSV/S3 pipelines, Elasticsearch batchi
 🧰 Toolbox
 
 Languages: Ruby, JavaScript/TypeScript, SQL, Swift (iOS), Bash
-
 Frameworks / Runtimes: Rails 6/7, Rack, RSpec & Minitest, Sidekiq, Redis, Node.js
-
 Datastores: PostgreSQL/MySQL, Elasticsearch, SQLite, S3 (data lake patterns)
-
 Infra / DevOps: AWS (S3, EC2, RDS, SQS, SES), Docker, GitHub Actions, Nginx
-
 Practices: TDD, Clean architecture, background job orchestration, observability (Honeybadger/Logs), performance profiling
 
 ⸻
 
 🌟 Highlights
-	•	Designed a Stackable Alerts system with SHA‑256 fingerprinting, severity gates, and email snapshotting.
-	•	Built memory‑safe CSV ingestion flows (2GB+) with streaming, batching, and back‑pressure via Sidekiq.
+	•	Designed a Stackable Alerts system with SHA-256 fingerprinting, severity gates, and email snapshotting.
+	•	Built memory-safe CSV ingestion flows (2GB+) with streaming, batching, and back-pressure via Sidekiq.
 	•	Implemented Elasticsearch indexing/search with batch upserts and denormalized views.
 	•	Rewrote brittle migrations & scopes; added robust Minitest/RSpec coverage and CI gates.
 
-Impact: fewer regressions, faster ingest, clearer on‑call signals, and happier teammates.
+Impact: fewer regressions, faster ingest, clearer on-call signals, and happier teammates.
 
 ⸻
 
@@ -72,7 +68,7 @@ Impact: fewer regressions, faster ingest, clearer on‑call signals, and happier
 
 content_system (Rails)
 
-High‑volume content delivery platform with subscriptions, deliveries, and exclusion logic; robust CSV/S3 ingestion; alerting & notifications.
+High-volume content delivery platform with subscriptions, deliveries, and exclusion logic; robust CSV/S3 ingestion; alerting & notifications.
 
 alert-notifier (Gem)
 
@@ -80,7 +76,7 @@ Configurable alerting primitives (stackable fingerprint, occurrences, severity, 
 
 csv-streamer (Gem)
 
-Zero‑copy CSV streaming utilities for massive files; enumerators, chunked writes, and memory guardrails.
+Zero-copy CSV streaming utilities for massive files; enumerators, chunked writes, and memory guardrails.
 
 star_deduplicator (Gem)
 
@@ -90,11 +86,11 @@ algo-sage (VS Code Extension)
 
 Developer assistant that suggests algorithms, complexity notes, and code patterns for Ruby/TS.
 
-saṃskṛt‑nlp (Research)
+saṃskṛt-nlp (Research)
 
 Independent Sanskrit NLP experiments: data ingestion from PDFs, tokenization, ByT5/BERT exploration.
 
-Note: Repositories may be private/work‑in‑progress. Ping me if you’d like a walkthrough.
+Note: Repositories may be private/work-in-progress. Ping me if you’d like a walkthrough.
 
 ⸻
 
@@ -111,9 +107,6 @@ I’m always up for pairing on issues labeled good first issue/help wanted.
 
 📊 Stats
 
-Replace mridul-shukla below with your GitHub handle and uncomment the images.
-
-<!--
 <p align="center">
   <img src="https://github-readme-stats.vercel.app/api?username=mridul-shukla&show_icons=true&hide_title=true" alt="GitHub Stats" />
 </p>
@@ -123,19 +116,11 @@ Replace mridul-shukla below with your GitHub handle and uncomment the images.
 <p align="center">
   <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=mridul-shukla&layout=compact" alt="Top Languages" />
 </p>
--->
 
 
 <details>
   <summary>Activity Graph</summary>
-
-
-  <!-- Optional: requires external service -->
-
-
-  <!-- <img src="https://github-readme-activity-graph.vercel.app/graph?username=mridul-shukla&hide_border=true" alt="Activity Graph"/> -->
-
-
+  <img src="https://github-readme-activity-graph.vercel.app/graph?username=mridul-shukla&hide_border=true" alt="Activity Graph"/>
 </details>
 
 
@@ -147,13 +132,13 @@ Replace mridul-shukla below with your GitHub handle and uncomment the images.
 	•	Scaling CSV ingestion on Rails without blowing memory
 	•	Elasticsearch batching for 1M+ documents
 
-DM for slides or long‑form writeups.
+DM for slides or long-form writeups.
 
 ⸻
 
 📫 Contact
-	•	GitHub: [@mridul-shukla](https://github.com/MridulS-R)
-	•	LinkedIn: [/in/mridul-shukla](https://www.linkedin.com/in/mridul-shukla-1a335818a/)
+	•	GitHub: @mridul-shukla
+	•	LinkedIn: /in/mridul-shukla
 
 ⸻
 
@@ -164,3 +149,5 @@ If you like my work, star the repos, open issues, or say hi!
 <p align="center">
   <img src="https://komarev.com/ghpvc/?username=mridul-shukla&label=Profile%20views&color=0e75b6&style=flat" alt="views" />
 </p>
+
+
