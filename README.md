@@ -1,7 +1,7 @@
 <p align="center">
   <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="https://svg-banners.vercel.app/api?type=glitch&text1=MRIDUL%20SHUKLA&text2=Senior%20Software%20Engineer&width=1600&height=350"/>
-    <img alt="Mridul Shukla — Senior Software Engineer" src="https://svg-banners.vercel.app/api?type=glitch&text1=MRIDUL%20SHUKLA&text2=Senior%20Software%20Engineer&width=1600&height=350"/>
+    <source media="(prefers-color-scheme: dark)" srcset="https://svg-banners.vercel.app/api?type=glitch&text1=Hello%20World!&text2=Senior%20Software%20Engineer&width=1600&height=350"/>
+    <img alt="Mridul Shukla — Senior Software Engineer" src="https://svg-banners.vercel.app/api?type=glitch&text1=Hello%20World!&text2=Senior%20Software%20Engineer&width=1600&height=350"/>
   </picture>
 </p>
 
