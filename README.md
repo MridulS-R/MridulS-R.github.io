@@ -26,21 +26,6 @@
 </p>
 
 
-<p align=\"center\">
-  <a href=\"https://rubyonrails.org/\"><img src=\"https://cdn.jsdelivr.net/gh/devicons/devicon/icons/rails/rails-plain-wordmark.svg\" alt=\"Rails\" width=\"70\"/></a>
-  <a href=\"https://www.ruby-lang.org/\"><img src=\"https://cdn.jsdelivr.net/gh/devicons/devicon/icons/ruby/ruby-original.svg\" alt=\"Ruby\" width=\"70\"/></a>
-  <a href=\"https://www.postgresql.org/\"><img src=\"https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg\" alt=\"Postgres\" width=\"70\"/></a>
-  <a href=\"https://www.elastic.co/elasticsearch/\"><img src=\"https://cdn.jsdelivr.net/gh/devicons/devicon/icons/elasticsearch/elasticsearch-original.svg\" alt=\"Elasticsearch\" width=\"70\"/></a>
-  <a href=\"https://www.java.com/\"><img src=\"https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg\" alt=\"Java\" width=\"70\"/></a>
-  <a href=\"https://spring.io/\"><img src=\"https://cdn.jsdelivr.net/gh/devicons/devicon/icons/spring/spring-original.svg\" alt=\"Spring\" width=\"70\"/></a>
-  <a href=\"https://www.docker.com/\"><img src=\"https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg\" alt=\"Docker\" width=\"70\"/></a>
-  <a href=\"https://redis.io/\"><img src=\"https://cdn.jsdelivr.net/gh/devicons/devicon/icons/redis/redis-original.svg\" alt=\"Redis\" width=\"70\"/></a>
-  <a href=\"https://nodejs.org/\"><img src=\"https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg\" alt=\"Node.js\" width=\"70\"/></a>
-  <a href=\"https://developer.apple.com/swift/\"><img src=\"https://cdn.jsdelivr.net/gh/devicons/devicon/icons/swift/swift-original.svg\" alt=\"Swift\" width=\"70\"/></a>
-  <a href=\"https://www.typescriptlang.org/\"><img src=\"https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg\" alt=\"TypeScript\" width=\"70\"/></a>
-</p>
-
-
 <p align="center">
   <a href="https://github.com/mridul-shukla" title="GitHub"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" width="40"/></a>
   <a href="https://www.linkedin.com/in/mridul-shukla-1a335818a/" title="LinkedIn"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linkedin/linkedin-original.svg" width="40"/></a>
@@ -83,6 +68,17 @@ Current interests: performance tuning for CSV/S3 pipelines, Elasticsearch batchi
 
 ⸻
 
+
+🌟 Highlights
+	•	Designed a Stackable Alerts system with SHA‑256 fingerprinting, severity gates, and email snapshotting.
+	•	Built memory‑safe CSV ingestion flows (2GB+) with streaming, batching, and back‑pressure via Sidekiq.
+	•	Implemented Elasticsearch indexing/search with batch upserts and denormalized views.
+	•	Rewrote brittle migrations & scopes; added robust Minitest/RSpec coverage and CI gates.
+
+Impact: fewer regressions, faster ingest, clearer on‑call signals, and happier teammates.
+
+⸻
+
 🧰 Toolbox
 
 Languages: Ruby, Java, JavaScript/TypeScript, SQL, Swift (iOS), Bash
@@ -92,3 +88,17 @@ Infra / DevOps: AWS (S3, EC2, RDS, SQS, SES), Docker, GitHub Actions, Nginx
 Practices: TDD, Clean architecture, background job orchestration, observability (Honeybadger/Logs), performance profiling
 
 ⸻
+
+📫 Contact
+	•	GitHub: [@mridul-shukla](https://github.com/MridulS-R)
+	•	LinkedIn: [/in/mridul-shukla](https://www.linkedin.com/in/mridul-shukla-1a335818a/)
+
+⸻
+
+☕ Support / Connect
+
+If you like my work, star the repos, open issues, or say hi!
+
+<p align="center">
+  <img src="https://komarev.com/ghpvc/?username=mridul-shukla&label=Profile%20views&color=0e75b6&style=flat" alt="views" />
+</p>
