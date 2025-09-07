@@ -28,7 +28,7 @@
 ---
 
 ## 🧭 About Me
-- Rails engineer focused on **large-scale ingestion**, **background jobs**, and **domain-heavy systems**.  
+- Worked on **large-scale ingestion**, **background jobs**, and **domain-heavy systems**.  
 - Recently building a flexible **Alerts/Notification** subsystem (polymorphic, fingerprinting/stacking, email jobs).  
 - Love turning ambiguous requirements into **production-ready** features with tests & docs.  
 - Exploring **Ruby gems**, **VS Code extensions**, **iOS prototypes**, and **Sanskrit NLP** side projects.  
