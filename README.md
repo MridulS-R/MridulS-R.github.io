@@ -70,12 +70,13 @@ Current interests: performance tuning for CSV/S3 pipelines, Elasticsearch batchi
 
 
 🌟 Highlights
-	•	Designed a Stackable Alerts system with SHA‑256 fingerprinting, severity gates, and email snapshotting.
-	•	Built memory‑safe CSV ingestion flows (2GB+) with streaming, batching, and back‑pressure via Sidekiq.
-	•	Implemented Elasticsearch indexing/search with batch upserts and denormalized views.
-	•	Rewrote brittle migrations & scopes; added robust Minitest/RSpec coverage and CI gates.
+	•	Data Axle (2021–Present): Boosted product revenue by 20% in a few months by solving critical issues and aligning the product with customer needs. Streamlined validation processes to handle 1B+ data records in just two quarters, while reducing deployment costs by 5%.
+	•	Performance & Scale: Built memory-safe ingestion pipelines that processed 10% more data per quarter, leveraging Rails, Sidekiq Pro, AWS, and Elasticsearch.
+	•	Globant (2020–2021): Contributed to ESPN Golden Analyzers (Disney DTCI), delivering reusable Ruby gems that improved testing capacity and workflow usability for large-scale systems.
+	•	MothersonSumi (2017–2019): Designed and deployed microservices (Kafka + Rails + Node.js) for RestaurantOS, and built a GST taxation module in Java/Postgres that scaled nationwide.
+	•	Engineering Practices: Strong focus on TDD (RSpec/Minitest/Capybara), clean architectures, RESTful APIs, and scalable backend design.
 
-Impact: fewer regressions, faster ingest, clearer on‑call signals, and happier teammates.
+Impact:  measurable revenue growth, reduced operational costs, large-scale data validation, reusable tooling for enterprise, and successful delivery of high-traffic platforms.
 
 ⸻
 
@@ -94,10 +95,6 @@ Practices: TDD, Clean architecture, background job orchestration, observability 
 	•	LinkedIn: [/in/mridul-shukla](https://www.linkedin.com/in/mridul-shukla-1a335818a/)
 
 ⸻
-
-☕ Support / Connect
-
-If you like my work, star the repos, open issues, or say hi!
 
 <p align="center">
   <img src="https://komarev.com/ghpvc/?username=mridul-shukla&label=Profile%20views&color=0e75b6&style=flat" alt="views" />
