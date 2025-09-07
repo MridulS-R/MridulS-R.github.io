@@ -23,17 +23,7 @@
   <img src="https://img.shields.io/badge/TypeScript-3178C6?logo=typescript&logoColor=white&style=for-the-badge" alt="TypeScript"/>
 </p>
 
-> Senior Software Engineer · Rails/Backend · Data pipelines · Alerts/Notifications · Performance & scale
-
-<p align="center">
-  <a href="#-about-me">About</a> •
-  <a href="#-toolbox">Toolbox</a> •
-  <a href="#-highlights">Highlights</a> •
-  <a href="#-featured-projects">Projects</a> •
-  <a href="#-open-source">Open Source</a> •
-  <a href="#-stats">Stats</a> •
-  <a href="#-contact">Contact</a>
-</p>
+> Senior Software Engineer · Rails/Backend · Java/Backend · Python/DJango 
 
 ---
 
