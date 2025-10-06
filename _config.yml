@@ -11,6 +11,7 @@ author:
 plugins:
   - jekyll-seo-tag
   - jekyll-sitemap
+  - jekyll-feed
 markdown: kramdown
 kramdown:
   input: GFM

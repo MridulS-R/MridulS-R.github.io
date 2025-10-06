@@ -12,8 +12,15 @@
   <body>
     <a class="skip-link" href="#content">Skip to content</a>
     <header class="site-header">
-      <div class="container">
+      <div class="container header-row">
         <a class="brand" href="{{ '/' | absolute_url }}">{{ site.title }}</a>
+        <nav class="nav">
+          <a href="{{ '/' | relative_url }}">Home</a>
+          <a href="{{ '/projects/' | relative_url }}">Projects</a>
+          <a href="{{ '/blog/' | relative_url }}">Blog</a>
+          <a href="{{ '/tags/' | relative_url }}">Tags</a>
+          <a href="/feed.xml">RSS</a>
+        </nav>
       </div>
     </header>
     <main id="content" class="container">
