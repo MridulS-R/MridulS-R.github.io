@@ -1,0 +1,25 @@
+title: "Mridul Shukla — Senior Software Engineer"
+description: "Rails/Backend · Java/Backend · Python/Django. Large-scale ingestion, background jobs, and domain-heavy systems."
+url: "https://mriduls-r.github.io"
+baseurl: ""
+author:
+  name: "Mridul Shukla"
+  github: "MridulS-R"
+  linkedin: "https://www.linkedin.com/in/mridul-shukla-1a335818a/"
+  email: ""
+  location: ""
+plugins:
+  - jekyll-seo-tag
+  - jekyll-sitemap
+markdown: kramdown
+kramdown:
+  input: GFM
+  hard_wrap: false
+timezone: UTC
+permalink: pretty
+exclude:
+  - node_modules
+  - vendor
+  - Gemfile
+  - Gemfile.lock
+  - README.md

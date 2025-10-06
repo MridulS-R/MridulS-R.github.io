@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#0f172a" media="(prefers-color-scheme: dark)">
+    <meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)">
+    <link rel="icon" href="{{ '/assets/favicon.svg' | relative_url }}" type="image/svg+xml">
+    <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}" />
+    {%- seo -%}
+  </head>
+  <body>
+    <a class="skip-link" href="#content">Skip to content</a>
+    <header class="site-header">
+      <div class="container">
+        <a class="brand" href="{{ '/' | absolute_url }}">{{ site.title }}</a>
+      </div>
+    </header>
+    <main id="content" class="container">
+      {{ content }}
+    </main>
+    <footer class="site-footer">
+      <div class="container">
+        <p>
+          © <span id="year"></span> {{ site.author.name | default: 'Author' }} ·
+          <a href="https://github.com/{{ site.author.github }}" rel="me">GitHub</a>
+          · <a href="{{ site.author.linkedin }}" rel="me">LinkedIn</a>
+        </p>
+      </div>
+    </footer>
+    <script>
+      document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
+  </body>
+  </html>
