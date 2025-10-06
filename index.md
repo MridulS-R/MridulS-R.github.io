@@ -7,10 +7,7 @@ image: "https://svg-banners.vercel.app/api?type=glitch&text1=Hello%20World!&text
 <section class="hero center">
   <h1 class="title">👋 Hi, I’m MRIDUL SHUKLA</h1>
   <p class="subtitle">Senior Software Engineer · Rails/Backend · Java/Backend · Python/Django</p>
-  <p class="cta">
-    <a class="btn btn-primary" href="{{ '/projects/' | relative_url }}">View Projects</a>
-    <a class="btn btn-ghost" href="{{ '/blog/' | relative_url }}">Read Blog</a>
-  </p>
+  <!-- CTA buttons removed to avoid duplicate Projects/Blog links with navbar -->
   <div class="badges">
   <img src="https://img.shields.io/badge/Ruby_on_Rails-%23CC0000.svg?logo=rubyonrails&logoColor=white&style=for-the-badge" alt="Rails"/>
   <img src="https://img.shields.io/badge/Ruby-CC342D?logo=ruby&logoColor=white&style=for-the-badge" alt="Ruby"/>
