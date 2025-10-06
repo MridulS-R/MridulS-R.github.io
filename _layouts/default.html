@@ -3,8 +3,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="theme-color" content="#0f172a" media="(prefers-color-scheme: dark)">
-    <meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)">
+    <meta id="meta-theme-color" name="theme-color" content="#121417">
     <link rel="icon" href="{{ '/assets/favicon.svg' | relative_url }}" type="image/svg+xml">
     <script>
       try {
@@ -69,11 +68,20 @@
       (function(){
         var btn = document.getElementById('theme-toggle');
         if (!btn) return;
+        var meta = document.getElementById('meta-theme-color');
+        function updateMetaTheme() {
+          try {
+            var bg = getComputedStyle(document.documentElement).getPropertyValue('--bg').trim();
+            if (meta && bg) meta.setAttribute('content', bg);
+          } catch(e) {}
+        }
         function apply(theme){
           document.documentElement.setAttribute('data-theme', theme);
+          document.documentElement.style.colorScheme = theme;
           try { localStorage.setItem('theme', theme); } catch(e) {}
           btn.textContent = theme === 'light' ? '☀️' : '🌙';
           btn.setAttribute('aria-pressed', theme === 'dark' ? 'true' : 'false');
+          updateMetaTheme();
         }
         btn.addEventListener('click', function(){
           var current = document.documentElement.getAttribute('data-theme');
@@ -83,6 +91,12 @@
         // Initialize button state
         var t = document.documentElement.getAttribute('data-theme');
         if (t === 'light' || t === 'dark') { apply(t); }
+        else {
+          // No explicit theme set; infer from OS preference
+          var prefersLight = window.matchMedia && window.matchMedia('(prefers-color-scheme: light)').matches;
+          apply(prefersLight ? 'light' : 'dark');
+        }
+        updateMetaTheme();
       })();
       (function(){
         // Reveal-on-scroll animations for elements with .reveal

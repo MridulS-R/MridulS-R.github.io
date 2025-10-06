@@ -95,6 +95,39 @@ image: "https://svg-banners.vercel.app/api?type=glitch&text1=Hello%20World!&text
 
 ---
 
+## ⭐ Featured Projects
+
+{% assign featured = site.data.featured | default: empty %}
+{% if featured and featured.size > 0 %}
+<div class="grid reveal">
+  {% assign repos = site.github.public_repositories %}
+  {% for item in featured %}
+    {% assign nwo = item.repo %}
+    {% assign repo_name = nwo | split: '/' | last %}
+    {% assign gh = repos | where: 'name', repo_name | first %}
+    <div class="card">
+      <h3>
+        <a href="{{ gh.html_url | default: ('https://github.com/' | append: nwo) }}">{{ item.title | default: (gh.name | default: repo_name) }}</a>
+      </h3>
+      {% if item.tags %}<p class="muted">{{ item.tags | join: ' · ' }}</p>{% elsif gh.language %}<p class="muted">{{ gh.language }}</p>{% endif %}
+      {% if item.blurb %}<p>{{ item.blurb }}</p>{% elsif gh.description %}<p>{{ gh.description }}</p>{% endif %}
+      <div class="meta">
+        {% if gh.stargazers_count %}<span class="chip chip--star">{{ gh.stargazers_count }}</span>{% endif %}
+        {% if gh.language %}<span class="chip chip--lang">{{ gh.language }}</span>{% endif %}
+        {% if gh.pushed_at %}<span class="chip chip--updated">{{ gh.pushed_at | date: "%b %Y" }}</span>{% endif %}
+      </div>
+      {% if item.homepage or gh.homepage %}
+        <p><a href="{{ item.homepage | default: gh.homepage }}">Live</a></p>
+      {% endif %}
+    </div>
+  {% endfor %}
+</div>
+{% else %}
+<p class="muted">No featured projects yet. Add entries in <code>_data/featured.yml</code>.</p>
+{% endif %}
+
+---
+
 ## Latest Posts
 
 {% assign latest = site.posts | slice: 0, 3 %}
