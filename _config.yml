@@ -18,6 +18,7 @@ kramdown:
   hard_wrap: false
 timezone: UTC
 permalink: pretty
+excerpt_separator: "<!--more-->"
 exclude:
   - node_modules
   - vendor

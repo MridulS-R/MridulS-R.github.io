@@ -32,48 +32,66 @@ image: "https://svg-banners.vercel.app/api?type=glitch&text1=Hello%20World!&text
 ---
 
 <div class="home-section reveal">
-<div class="card">
-
-## 🧭 About Me
-
-- Worked on large-scale ingestion, background jobs, and domain-heavy systems.
-- Recently building a flexible Alerts/Notification subsystem (polymorphic, fingerprinting/stacking, email jobs).
-- Love turning ambiguous requirements into production-ready features with tests & docs.
-- Exploring Ruby gems, VS Code extensions, iOS prototypes, and Sanskrit NLP side projects.
-
-**Current interests:** performance tuning for CSV/S3 pipelines, Elasticsearch batching, Sidekiq cron/topology, and developer ergonomics.
-
----
-
-## 🌟 Highlights
-
-- Data Axle (2021–Present): Boosted product revenue by 20% in a few months by solving critical issues and aligning the product with customer needs. Streamlined validation processes to handle 1B+ data records in just two quarters, while reducing deployment costs by 5%.
-- Performance & Scale: Built memory-safe ingestion pipelines that processed 10% more data per quarter, leveraging Rails, Sidekiq Pro, AWS, and Elasticsearch.
-- Globant (2020–2021): Contributed to ESPN Golden Analyzers (Disney DTCI), delivering reusable Ruby gems that improved testing capacity and workflow usability for large-scale systems.
-- MothersonSumi (2017–2019): Designed and deployed microservices (Kafka + Rails + Node.js) for RestaurantOS, and built a GST taxation module in Java/Postgres that scaled nationwide.
-- Engineering Practices: Strong focus on TDD (RSpec/Minitest/Capybara), clean architectures, RESTful APIs, and scalable backend design.
-
-> Impact: measurable revenue growth, reduced operational costs, large-scale data validation, reusable tooling for enterprise, and successful delivery of high-traffic platforms.
-
----
-
-## 🧰 Toolbox
-
-**Languages:** Ruby, Java, JavaScript/TypeScript, SQL, Swift (iOS), Bash  
-**Frameworks / Runtimes:** Rails 6/7, Spring, Rack, RSpec & Minitest, Sidekiq, Redis, Node.js  
-**Datastores:** PostgreSQL/MySQL, Elasticsearch, SQLite, S3 (data lake patterns)  
-**Infra / DevOps:** AWS (S3, EC2, RDS, SQS, SES), Docker, GitHub Actions, Nginx  
-**Practices:** TDD, Clean architecture, background job orchestration, observability (Honeybadger/Logs), performance profiling  
-
----
-
-## 📫 Contact
-
-- GitHub: [@mridul-shukla](https://github.com/MridulS-R)
-- LinkedIn: [/in/mridul-shukla](https://www.linkedin.com/in/mridul-shukla-1a335818a/)
-
-
+  <div class="card">
+    <h2>🧭 About Me</h2>
+    <ul class="list-check">
+      <li>Large-scale ingestion, background jobs, and domain-heavy systems.</li>
+      <li>Currently building a flexible Alerts/Notification subsystem (polymorphic, fingerprinting/stacking, email jobs).</li>
+      <li>Turn ambiguous requirements into production-ready features with tests & docs.</li>
+      <li>Exploring Ruby gems, VS Code extensions, iOS prototypes, and Sanskrit NLP side projects.</li>
+    </ul>
+    <p class="muted">Current interests: performance tuning for CSV/S3 pipelines, Elasticsearch batching, Sidekiq cron/topology, and developer ergonomics.</p>
+  </div>
 </div>
+
+<div class="home-section reveal">
+  <div class="grid">
+    <div class="card">
+      <h3>Data Axle (2021–Present)</h3>
+      <p>Boosted product revenue by 20%; streamlined validation to handle 1B+ records in two quarters; reduced deployment costs by 5%.</p>
+    </div>
+    <div class="card">
+      <h3>Performance & Scale</h3>
+      <p>Memory-safe ingestion pipelines; +10% data throughput per quarter with Rails, Sidekiq Pro, AWS, and Elasticsearch.</p>
+    </div>
+    <div class="card">
+      <h3>Engineering Practices</h3>
+      <p>TDD focus (RSpec/Minitest/Capybara), clean architectures, RESTful APIs, and scalable backend design.</p>
+    </div>
+  </div>
+  <p class="center muted">Impact: measurable revenue growth, reduced costs, and successful high-traffic deliveries.</p>
+</div>
+
+<div class="home-section reveal">
+  <div class="card">
+    <h2>🧰 Toolbox</h2>
+    <div class="chips">
+      <span class="chip">Ruby</span>
+      <span class="chip">Rails</span>
+      <span class="chip">Java</span>
+      <span class="chip">Spring</span>
+      <span class="chip">TypeScript</span>
+      <span class="chip">Node.js</span>
+      <span class="chip">PostgreSQL</span>
+      <span class="chip">Elasticsearch</span>
+      <span class="chip">Redis</span>
+      <span class="chip">AWS</span>
+      <span class="chip">Docker</span>
+      <span class="chip">TDD</span>
+      <span class="chip">Observability</span>
+      <span class="chip">Sidekiq</span>
+    </div>
+  </div>
+</div>
+
+<div class="home-section reveal">
+  <div class="card center">
+    <h2>📫 Contact</h2>
+    <p>
+      <a class="btn btn-primary" href="https://github.com/MridulS-R">GitHub</a>
+      <a class="btn btn-ghost" href="https://www.linkedin.com/in/mridul-shukla-1a335818a/">LinkedIn</a>
+    </p>
+  </div>
 </div>
 
 <p class="center muted">Profile views counter omitted for faster loads and privacy.</p>
@@ -89,7 +107,8 @@ image: "https://svg-banners.vercel.app/api?type=glitch&text1=Hello%20World!&text
     <div class="card">
       <h3><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h3>
       <p class="muted">{{ post.date | date: "%b %d, %Y" }}</p>
-      {% if post.excerpt %}<p>{{ post.excerpt | strip_html | truncate: 140 }}</p>{% endif %}
+      {% assign blurb = post.description | default: post.excerpt %}
+      {% if blurb %}<p>{{ blurb | strip_html | truncate: 160 }}</p>{% endif %}
     </div>
   {% endfor %}
 </div>

@@ -1,11 +1,11 @@
-/* Base theme with dark-first palette */
+/* Base theme with dark-first palette (grey background) */
 :root {
   color-scheme: dark light;
-  --bg: #0b1020; /* deep navy */
+  --bg: #121417; /* neutral dark grey */
   --fg: #e5e7eb; /* slate-200 */
-  --muted: #94a3b8; /* slate-400 */
+  --muted: #9aa4b2; /* grey-400 */
   --link: #8ab4ff; /* soft blue */
-  --border: #1f2937; /* slate-800 */
+  --border: #2a2f39; /* grey-700 */
   --accent: #60a5fa; /* blue-400 */
   --g1: #0ea5e9; /* cyan-500 */
   --g2: #8b5cf6; /* violet-500 */
@@ -111,7 +111,7 @@ ul { padding-left: 1.2em; }
   border: 1px solid var(--border);
   border-radius: 12px;
   padding: 16px 18px;
-  background: color-mix(in lab, var(--bg) 96%, transparent);
+  background: color-mix(in lab, var(--bg) 93%, transparent);
 }
 .muted { color: var(--muted); }
 .section { margin: 24px 0; }
@@ -166,3 +166,10 @@ a:hover { text-decoration: underline; }
 /* Tag page */
 .tag-page h1 { margin-bottom: 0; }
 .tag-page .muted { margin-bottom: 1rem; display: block; }
+
+/* Chips and lists */
+.chips { display: flex; flex-wrap: wrap; gap: 8px; }
+.chip { display: inline-block; padding: 6px 10px; border: 1px solid var(--border); border-radius: 999px; color: var(--muted); font-size: 0.9em; }
+.list-check { list-style: none; padding-left: 0; }
+.list-check li { position: relative; padding-left: 1.4em; margin: 0.4em 0; }
+.list-check li::before { content: "✓"; position: absolute; left: 0; color: var(--accent); }
