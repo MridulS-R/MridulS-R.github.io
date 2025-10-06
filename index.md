@@ -81,18 +81,6 @@ image: "https://svg-banners.vercel.app/api?type=glitch&text1=Hello%20World!&text
   </div>
 </div>
 
-<div class="home-section reveal">
-  <div class="card center">
-    <h2>📫 Contact</h2>
-    <p>
-      <a class="btn btn-primary" href="https://github.com/MridulS-R">GitHub</a>
-      <a class="btn btn-ghost" href="https://www.linkedin.com/in/mridul-shukla-1a335818a/">LinkedIn</a>
-    </p>
-  </div>
-</div>
-
-<p class="center muted">Profile views counter omitted for faster loads and privacy.</p>
-
 ---
 
 ## ⭐ Featured Projects
@@ -166,3 +154,15 @@ image: "https://svg-banners.vercel.app/api?type=glitch&text1=Hello%20World!&text
 {% else %}
 <p class="muted">No public repositories found or metadata not available in local build.</p>
 {% endif %}
+
+
+
+<div class="home-section reveal">
+  <div class="card center">
+    <h2>📫 Contact</h2>
+    <p>
+      <a class="btn btn-primary" href="https://github.com/MridulS-R">GitHub</a>
+      <a class="btn btn-ghost" href="https://www.linkedin.com/in/mridul-shukla-1a335818a/">LinkedIn</a>
+    </p>
+  </div>
+</div>
