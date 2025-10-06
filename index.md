@@ -1,3 +1,4 @@
+---
 layout: default
 title: "Mridul Shukla — Senior Software Engineer"
 image: "https://svg-banners.vercel.app/api?type=glitch&text1=Hello%20World!&text2=Senior%20Software%20Engineer&width=1600&height=350"
