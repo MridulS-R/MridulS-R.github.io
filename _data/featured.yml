@@ -1,0 +1,10 @@
+# List your featured repositories here. Example:
+# - repo: MridulS-R/alerts-system   # owner/name
+#   title: Alerts/Notification Subsystem
+#   blurb: Polymorphic alerts with stacking and email orchestration.
+#   tags: [rails, sidekiq, redis]
+#   homepage: https://example.com/demo
+#   image: /assets/images/alerts.png
+
+[]
+

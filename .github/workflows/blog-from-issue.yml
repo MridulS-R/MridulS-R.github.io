@@ -1,0 +1,68 @@
+name: Blog from issue
+
+on:
+  issues:
+    types: [labeled]
+
+jobs:
+  create-post:
+    if: contains(github.event.label.name, 'blog')
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      issues: write
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - name: Create blog post from issue
+        env:
+          ISSUE_TITLE: ${{ github.event.issue.title }}
+          ISSUE_BODY: ${{ github.event.issue.body }}
+          ISSUE_NUMBER: ${{ github.event.issue.number }}
+          REPO: ${{ github.repository }}
+        run: |
+          set -euo pipefail
+          slug() { echo "$1" | tr '[:upper:]' '[:lower:]' | sed -E 's/[^a-z0-9]+/-/g; s/^-+|-+$//g'; }
+          TITLE="${ISSUE_TITLE}"
+          BODY="${ISSUE_BODY}"
+          TAGS=$(echo "$BODY" | sed -n 's/^Tags:[[:space:]]*//p' | head -n1 | sed 's/,\s*/", "/g; s/^/"/; s/$/"/')
+          [ -z "$TAGS" ] && TAGS=""
+          DATE=$(date -u +%F)
+          SLUG=$(slug "$TITLE")
+          FILE="_posts/${DATE}-${SLUG}.md"
+          mkdir -p _posts
+          echo "Creating $FILE"
+          {
+            echo '---'
+            echo 'layout: post'
+            printf 'title: "%s"\n' "$TITLE"
+            [ -n "$TAGS" ] && printf 'tags: [%s]\n' "$TAGS"
+            echo '---'
+            echo
+            echo "$BODY"
+            echo
+            echo "\n> Source: #${ISSUE_NUMBER}"
+          } > "$FILE"
+          git config user.name "github-actions"
+          git config user.email "actions@users.noreply.github.com"
+          git add "$FILE"
+          git commit -m "chore(blog): create post from issue #${ISSUE_NUMBER}"
+      - name: Push changes
+        uses: ad-m/github-push-action@v0.8.0
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+      - name: Comment on issue
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const issue_number = context.payload.issue.number;
+            const date = new Date().toISOString().slice(0,10);
+            const slug = context.payload.issue.title.toLowerCase().replace(/[^a-z0-9]+/g,'-').replace(/(^-|-$)/g,'');
+            const path = `_posts/${date}-${slug}.md`;
+            await github.rest.issues.createComment({
+              ...context.repo,
+              issue_number,
+              body: `Created post: ${path}`
+            });
+

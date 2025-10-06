@@ -15,7 +15,7 @@ permalink: /blog/
       {%- if post.tags and post.tags.size > 0 -%}
         <span>
           {%- for tag in post.tags -%}
-            <a class="tag" href="{{ '/tags/#' | append: tag | relative_url }}">#{{ tag }}</a>
+            <a class="tag" href="{{ '/tags/' | append: tag | slugify | append: '/' | relative_url }}">#{{ tag }}</a>
           {%- endfor -%}
         </span>
       {%- endif -%}

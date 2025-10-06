@@ -14,12 +14,13 @@
     <header class="site-header">
       <div class="container header-row">
         <a class="brand" href="{{ '/' | absolute_url }}">{{ site.title }}</a>
-        <nav class="nav">
-          <a href="{{ '/' | relative_url }}">Home</a>
-          <a href="{{ '/projects/' | relative_url }}">Projects</a>
-          <a href="{{ '/blog/' | relative_url }}">Blog</a>
-          <a href="{{ '/tags/' | relative_url }}">Tags</a>
-          <a href="/feed.xml">RSS</a>
+        <button class="nav-toggle" aria-controls="site-nav" aria-expanded="false" aria-label="Toggle navigation">☰</button>
+        <nav class="nav" id="site-nav">
+          <a class="{% if page.url == '/' %}active{% endif %}" href="{{ '/' | relative_url }}">Home</a>
+          <a class="{% if page.url contains '/projects/' %}active{% endif %}" href="{{ '/projects/' | relative_url }}">Projects</a>
+          <a class="{% if page.url contains '/blog/' or page.layout == 'post' %}active{% endif %}" href="{{ '/blog/' | relative_url }}">Blog</a>
+          <a class="{% if page.url contains '/tags/' %}active{% endif %}" href="{{ '/tags/' | relative_url }}">Tags</a>
+          <a class="{% if page.url == '/feed.xml' %}active{% endif %}" href="/feed.xml">RSS</a>
         </nav>
       </div>
     </header>
@@ -37,6 +38,25 @@
     </footer>
     <script>
       document.getElementById('year').textContent = new Date().getFullYear();
+      (function(){
+        var header = document.querySelector('.site-header');
+        var t = document.querySelector('.nav-toggle');
+        var n = document.getElementById('site-nav');
+        if (header) {
+          function onScroll(){
+            if (window.scrollY > 8) { header.classList.add('scrolled'); }
+            else { header.classList.remove('scrolled'); }
+          }
+          onScroll();
+          window.addEventListener('scroll', onScroll, { passive: true });
+        }
+        if(!t || !n) return;
+        t.addEventListener('click', function(){
+          var open = n.classList.toggle('open');
+          t.setAttribute('aria-expanded', open ? 'true' : 'false');
+          if (header) header.classList.toggle('open', open);
+        });
+      })();
     </script>
   </body>
   </html>

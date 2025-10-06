@@ -14,24 +14,12 @@ permalink: /tags/
   {% for tag in sorted_tags %}
     {% assign name = tag[0] %}
     {% assign posts = tag[1] %}
-    <li><a class="tag" href="#{{ name }}">#{{ name }}</a> <span class="muted">({{ posts | size }})</span></li>
+    <li><a class="tag" href="{{ '/tags/' | append: name | slugify | append: '/' | relative_url }}">#{{ name }}</a> <span class="muted">({{ posts | size }})</span></li>
   {% endfor %}
   </ul>
 
-{% for tag in sorted_tags %}
-  {% assign name = tag[0] %}
-  {% assign posts = tag[1] %}
-  <h2 id="{{ name }}">#{{ name }}</h2>
-  <ul>
-    {% for post in posts %}
-      <li>
-        <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
-        <span class="muted">— {{ post.date | date: "%b %d, %Y" }}</span>
-      </li>
-    {% endfor %}
-  </ul>
-{% endfor %}
+<hr />
+<p class="muted">Direct links above navigate to per-tag pages.</p>
 {% else %}
 <p class="muted">No tags yet. Add tags to posts with <code>tags: [example]</code> in front matter.</p>
 {% endif %}
-

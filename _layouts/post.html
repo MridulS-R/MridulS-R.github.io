@@ -11,11 +11,11 @@ layout: default
         ·
         <span>
           {%- for tag in page.tags -%}
-            <a class="tag" href="{{ '/tags/#' | append: tag | relative_url }}">#{{ tag }}</a>
+            <a class="tag" href="{{ '/tags/' | append: tag | slugify | append: '/' | relative_url }}">#{{ tag }}</a>
           {%- endfor -%}
         </span>
       {%- endif -%}
-    </p>
+  </p>
   </header>
 
   <div class="post-content">
@@ -36,4 +36,3 @@ layout: default
     </div>
   </nav>
 </article>
-

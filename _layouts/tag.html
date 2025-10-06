@@ -1,0 +1,24 @@
+---
+layout: default
+---
+
+<section class="tag-page">
+  <h1>#{{ page.tag }}</h1>
+  <p class="muted">Posts tagged with “{{ page.tag }}”.</p>
+
+  {% assign tag_name = page.tag %}
+  {% assign posts = site.tags[tag_name] %}
+  {% if posts and posts.size > 0 %}
+    <ul>
+      {% for post in posts %}
+        <li>
+          <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
+          <span class="muted">— {{ post.date | date: "%b %d, %Y" }}</span>
+        </li>
+      {% endfor %}
+    </ul>
+  {% else %}
+    <p class="muted">No posts yet for this tag.</p>
+  {% endif %}
+</section>
+

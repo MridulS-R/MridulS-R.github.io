@@ -1,10 +1,10 @@
----
 layout: default
 title: "Mridul Shukla — Senior Software Engineer"
 image: "https://svg-banners.vercel.app/api?type=glitch&text1=Hello%20World!&text2=Senior%20Software%20Engineer&width=1600&height=350"
 ---
 
-<p class="banner center">
+<section class="hero center">
+<p class="banner">
   <picture>
     <source media="(prefers-color-scheme: dark)" srcset="https://svg-banners.vercel.app/api?type=glitch&text1=Hello%20World!&text2=Senior%20Software%20Engineer&width=1600&height=350" />
     <img alt="Mridul Shukla — Senior Software Engineer banner" src="https://svg-banners.vercel.app/api?type=glitch&text1=Hello%20World!&text2=Senior%20Software%20Engineer&width=1600&height=350" />
@@ -12,6 +12,8 @@ image: "https://svg-banners.vercel.app/api?type=glitch&text1=Hello%20World!&text
   </p>
 
 # 👋 Hi, I’m MRIDUL SHUKLA
+
+<p class="lead">Senior Software Engineer · Rails/Backend · Java/Backend · Python/Django</p>
 
 <div class="badges">
   <img src="https://img.shields.io/badge/Ruby_on_Rails-%23CC0000.svg?logo=rubyonrails&logoColor=white&style=for-the-badge" alt="Rails"/>
@@ -29,9 +31,12 @@ image: "https://svg-banners.vercel.app/api?type=glitch&text1=Hello%20World!&text
   <img src="https://img.shields.io/badge/TypeScript-3178C6?logo=typescript&logoColor=white&style=for-the-badge" alt="TypeScript"/>
 </div>
 
-> Senior Software Engineer · Rails/Backend · Java/Backend · Python/Django
+</section>
 
 ---
+
+<div class="home-section">
+<div class="card">
 
 ## 🧭 About Me
 
@@ -71,5 +76,48 @@ image: "https://svg-banners.vercel.app/api?type=glitch&text1=Hello%20World!&text
 - GitHub: [@mridul-shukla](https://github.com/MridulS-R)
 - LinkedIn: [/in/mridul-shukla](https://www.linkedin.com/in/mridul-shukla-1a335818a/)
 
+
+</div>
+</div>
+
 <p class="center muted">Profile views counter omitted for faster loads and privacy.</p>
 
+---
+
+## Latest Posts
+
+{% assign latest = site.posts | slice: 0, 3 %}
+{% if latest and latest.size > 0 %}
+<div class="grid">
+  {% for post in latest %}
+    <div class="card">
+      <h3><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h3>
+      <p class="muted">{{ post.date | date: "%b %d, %Y" }}</p>
+      {% if post.excerpt %}<p>{{ post.excerpt | strip_html | truncate: 140 }}</p>{% endif %}
+    </div>
+  {% endfor %}
+</div>
+{% else %}
+<p class="muted">No posts yet.</p>
+{% endif %}
+
+---
+
+## Recent Repositories
+
+{% assign repos = site.github.public_repositories | where_exp: 'r', 'r.fork == false' | where_exp: 'r', 'r.archived == false' | sort: 'pushed_at' | reverse %}
+{% assign repos = repos | slice: 0, 6 %}
+{% if repos and repos.size > 0 %}
+<div class="grid">
+  {% for r in repos %}
+    <div class="card">
+      <h3><a href="{{ r.html_url }}">{{ r.name }}</a></h3>
+      {% if r.description %}<p>{{ r.description }}</p>{% endif %}
+      <p class="muted">⭐ {{ r.stargazers_count }} · {{ r.language }} · Updated {{ r.pushed_at | date: "%b %Y" }}</p>
+      {% if r.homepage %}<p><a href="{{ r.homepage }}">Live</a></p>{% endif %}
+    </div>
+  {% endfor %}
+</div>
+{% else %}
+<p class="muted">No public repositories found or metadata not available in local build.</p>
+{% endif %}

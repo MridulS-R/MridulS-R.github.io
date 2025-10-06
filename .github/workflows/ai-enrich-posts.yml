@@ -1,0 +1,67 @@
+name: AI enrich posts (suggestions)
+
+on:
+  pull_request:
+    paths:
+      - '_posts/**'
+
+jobs:
+  enrich:
+    if: ${{ secrets.OPENAI_API_KEY != '' }}
+    runs-on: ubuntu-latest
+    permissions:
+      pull-requests: write
+      contents: read
+    steps:
+      - uses: actions/checkout@v4
+      - name: Suggest description and tags via OpenAI
+        uses: actions/github-script@v7
+        env:
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+        with:
+          script: |
+            const fs = require('fs');
+            const path = require('path');
+            const { data: files } = await github.rest.pulls.listFiles({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              pull_number: context.payload.pull_request.number,
+            });
+            const post = files.find(f => f.filename.startsWith('_posts/') && (f.status === 'added' || f.status === 'modified'));
+            if (!post) {
+              core.info('No post change found.');
+              return;
+            }
+            const content = fs.readFileSync(path.join(process.cwd(), post.filename), 'utf8');
+            const body = content.replace(/^---[\s\S]*?---/m, '').trim();
+            const prompt = `You are a concise editor. Given a blog post body, propose:\n- a one-sentence SEO description (<= 160 chars)\n- 5 relevant tags (kebab-case)\nReturn JSON with keys: description, tags.\n\nBODY:\n${body}`;
+            const res = await fetch('https://api.openai.com/v1/chat/completions', {
+              method: 'POST',
+              headers: {
+                'Content-Type': 'application/json',
+                'Authorization': `Bearer ${process.env.OPENAI_API_KEY}`,
+              },
+              body: JSON.stringify({
+                model: 'gpt-4o-mini',
+                messages: [{ role: 'user', content: prompt }],
+                temperature: 0.4,
+              }),
+            });
+            if (!res.ok) {
+              core.warning(`OpenAI API error: ${res.status}`);
+              return;
+            }
+            const json = await res.json();
+            const text = json.choices?.[0]?.message?.content || '';
+            let suggestion = text.trim();
+            // Guard: ensure it looks like JSON
+            if (!suggestion.startsWith('{')) {
+              suggestion = JSON.stringify({ note: 'Non-JSON response', raw: suggestion });
+            }
+            await github.rest.issues.createComment({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              issue_number: context.payload.pull_request.number,
+              body: `AI suggestions for ${post.filename}:\n\n\n\n\n${'```'}json\n${suggestion}\n${'```'}`,
+            });
+
