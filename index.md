@@ -4,18 +4,13 @@ image: "https://svg-banners.vercel.app/api?type=glitch&text1=Hello%20World!&text
 ---
 
 <section class="hero center">
-<p class="banner">
-  <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="https://svg-banners.vercel.app/api?type=glitch&text1=Hello%20World!&text2=Senior%20Software%20Engineer&width=1600&height=350" />
-    <img alt="Mridul Shukla — Senior Software Engineer banner" src="https://svg-banners.vercel.app/api?type=glitch&text1=Hello%20World!&text2=Senior%20Software%20Engineer&width=1600&height=350" />
-  </picture>
+  <h1 class="title">👋 Hi, I’m MRIDUL SHUKLA</h1>
+  <p class="subtitle">Senior Software Engineer · Rails/Backend · Java/Backend · Python/Django</p>
+  <p class="cta">
+    <a class="btn btn-primary" href="{{ '/projects/' | relative_url }}">View Projects</a>
+    <a class="btn btn-ghost" href="{{ '/blog/' | relative_url }}">Read Blog</a>
   </p>
-
-# 👋 Hi, I’m MRIDUL SHUKLA
-
-<p class="lead">Senior Software Engineer · Rails/Backend · Java/Backend · Python/Django</p>
-
-<div class="badges">
+  <div class="badges">
   <img src="https://img.shields.io/badge/Ruby_on_Rails-%23CC0000.svg?logo=rubyonrails&logoColor=white&style=for-the-badge" alt="Rails"/>
   <img src="https://img.shields.io/badge/Ruby-CC342D?logo=ruby&logoColor=white&style=for-the-badge" alt="Ruby"/>
   <img src="https://img.shields.io/badge/PostgreSQL-316192?logo=postgresql&logoColor=white&style=for-the-badge" alt="Postgres"/>
@@ -29,13 +24,13 @@ image: "https://svg-banners.vercel.app/api?type=glitch&text1=Hello%20World!&text
   <img src="https://img.shields.io/badge/Node.js-339933?logo=node.js&logoColor=white&style=for-the-badge" alt="Node.js"/>
   <img src="https://img.shields.io/badge/Swift-FA7343?logo=swift&logoColor=white&style=for-the-badge" alt="Swift"/>
   <img src="https://img.shields.io/badge/TypeScript-3178C6?logo=typescript&logoColor=white&style=for-the-badge" alt="TypeScript"/>
-</div>
+  </div>
 
 </section>
 
 ---
 
-<div class="home-section">
+<div class="home-section reveal">
 <div class="card">
 
 ## 🧭 About Me
@@ -88,7 +83,7 @@ image: "https://svg-banners.vercel.app/api?type=glitch&text1=Hello%20World!&text
 
 {% assign latest = site.posts | slice: 0, 3 %}
 {% if latest and latest.size > 0 %}
-<div class="grid">
+<div class="grid reveal">
   {% for post in latest %}
     <div class="card">
       <h3><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h3>
@@ -108,7 +103,7 @@ image: "https://svg-banners.vercel.app/api?type=glitch&text1=Hello%20World!&text
 {% assign repos = site.github.public_repositories | where_exp: 'r', 'r.fork == false' | where_exp: 'r', 'r.archived == false' | sort: 'pushed_at' | reverse %}
 {% assign repos = repos | slice: 0, 6 %}
 {% if repos and repos.size > 0 %}
-<div class="grid">
+<div class="grid reveal">
   {% for r in repos %}
     <div class="card">
       <h3><a href="{{ r.html_url }}">{{ r.name }}</a></h3>
