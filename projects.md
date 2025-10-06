@@ -23,10 +23,11 @@ Below are Featured projects you curate, followed by an auto‑listed set of your
       </h3>
       {% if item.tags %}<p class="muted">{{ item.tags | join: ' · ' }}</p>{% elsif gh.language %}<p class="muted">{{ gh.language }}</p>{% endif %}
       {% if item.blurb %}<p>{{ item.blurb }}</p>{% elsif gh.description %}<p>{{ gh.description }}</p>{% endif %}
-      <p class="muted">
-        {% if gh.stargazers_count %}⭐ {{ gh.stargazers_count }} ·{% endif %}
-        {% if gh.pushed_at %} Updated {{ gh.pushed_at | date: "%b %Y" }}{% endif %}
-      </p>
+      <div class="meta">
+        {% if gh.stargazers_count %}<span class="chip chip--star">{{ gh.stargazers_count }}</span>{% endif %}
+        {% if gh.language %}<span class="chip chip--lang">{{ gh.language }}</span>{% endif %}
+        {% if gh.pushed_at %}<span class="chip chip--updated">{{ gh.pushed_at | date: "%b %Y" }}</span>{% endif %}
+      </div>
       {% if item.homepage or gh.homepage %}
         <p><a href="{{ item.homepage | default: gh.homepage }}">Live</a></p>
       {% endif %}
@@ -52,9 +53,12 @@ Below are Featured projects you curate, followed by an auto‑listed set of your
     {% endif %}
     <div class="card">
       <h3><a href="{{ r.html_url }}">{{ r.name }}</a></h3>
-      {% if r.language %}<p class="muted">{{ r.language }}</p>{% endif %}
       {% if r.description %}<p>{{ r.description }}</p>{% endif %}
-      <p class="muted">⭐ {{ r.stargazers_count }} · Updated {{ r.pushed_at | date: "%b %Y" }}</p>
+      <div class="meta">
+        <span class="chip chip--star">{{ r.stargazers_count }}</span>
+        {% if r.language %}<span class="chip chip--lang">{{ r.language }}</span>{% endif %}
+        <span class="chip chip--updated">{{ r.pushed_at | date: "%b %Y" }}</span>
+      </div>
       {% if r.homepage %}<p><a href="{{ r.homepage }}">Live</a></p>{% endif %}
     </div>
   {% endfor %}

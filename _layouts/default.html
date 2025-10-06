@@ -6,6 +6,12 @@
     <meta name="theme-color" content="#0f172a" media="(prefers-color-scheme: dark)">
     <meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)">
     <link rel="icon" href="{{ '/assets/favicon.svg' | relative_url }}" type="image/svg+xml">
+    <script>
+      try {
+        var t = localStorage.getItem('theme');
+        if (t === 'light' || t === 'dark') { document.documentElement.setAttribute('data-theme', t); }
+      } catch(e) {}
+    </script>
     <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}" />
     {%- seo -%}
   </head>
@@ -14,7 +20,10 @@
     <header class="site-header">
       <div class="container header-row">
         <a class="brand" href="{{ '/' | absolute_url }}">{{ site.title }}</a>
-        <button class="nav-toggle" aria-controls="site-nav" aria-expanded="false" aria-label="Toggle navigation">☰</button>
+        <div>
+          <button class="theme-toggle" id="theme-toggle" aria-label="Toggle theme" aria-pressed="false">🌙</button>
+          <button class="nav-toggle" aria-controls="site-nav" aria-expanded="false" aria-label="Toggle navigation">☰</button>
+        </div>
         <nav class="nav" id="site-nav">
           <a class="{% if page.url == '/' %}active{% endif %}" href="{{ '/' | relative_url }}">Home</a>
           <a class="{% if page.url contains '/projects/' %}active{% endif %}" href="{{ '/projects/' | relative_url }}">Projects</a>
@@ -56,6 +65,24 @@
           t.setAttribute('aria-expanded', open ? 'true' : 'false');
           if (header) header.classList.toggle('open', open);
         });
+      })();
+      (function(){
+        var btn = document.getElementById('theme-toggle');
+        if (!btn) return;
+        function apply(theme){
+          document.documentElement.setAttribute('data-theme', theme);
+          try { localStorage.setItem('theme', theme); } catch(e) {}
+          btn.textContent = theme === 'light' ? '☀️' : '🌙';
+          btn.setAttribute('aria-pressed', theme === 'dark' ? 'true' : 'false');
+        }
+        btn.addEventListener('click', function(){
+          var current = document.documentElement.getAttribute('data-theme');
+          var next = current === 'light' ? 'dark' : 'light';
+          apply(next);
+        });
+        // Initialize button state
+        var t = document.documentElement.getAttribute('data-theme');
+        if (t === 'light' || t === 'dark') { apply(t); }
       })();
       (function(){
         // Reveal-on-scroll animations for elements with .reveal
